@@ -28,7 +28,6 @@ var isValid = function (s) {
     return stack.length === 0;
 }
 
-// run this with some test cases
 console.log(isValid("()"));         // Output: true
 console.log(isValid("()[]{}"));     // Output: true
 console.log(isValid("(]"));         // Output: false

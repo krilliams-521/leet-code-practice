@@ -36,7 +36,6 @@ var floodFill = function (imageGrid, startRow, startCol, newColor) {
 };
 
 
-// run with some examples
 console.log(floodFill([
   [1, 1, 1],
   [1, 1, 0],

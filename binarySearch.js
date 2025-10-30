@@ -28,6 +28,6 @@ var search = function (nums, target) {
   return -1; // target not found
 };
 
-// run with some examples
+
 console.log(search([-1, 0, 3, 5, 9, 12], 9)); // Output: 4
 console.log(search([-1, 0, 3, 5, 9, 12], 2)); // Output: -1

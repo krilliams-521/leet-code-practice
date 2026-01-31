@@ -27,7 +27,11 @@ var mergeTwoLists = function (list1, list2) {
   }
 
   // Attach any remaining nodes (one of them may still have values left)
-  current.next = list1 !== null ? list1 : list2;
+  if (list1 !== null) {
+    current.next = list1;
+  } else {
+    current.next = list2;
+  }
 
   // Return the real head (dummy.next)
   return dummy.next;

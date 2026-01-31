@@ -1,10 +1,15 @@
-from collections import Counter
 class Solution:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
-        neg_nums = [num * (num - target) for num in nums]
-        num_dict = Counter(neg_nums)
-        n = [k for k, v in num_dict.items() if v  == 2]
-        for num in n:
-            result = [i for i, v in enumerate(neg_nums) if v == num]
-            if nums[result[0]] + nums[result[1]] == target:
-                return result
+    def twoSum(self, nums: list[int], target: int) -> list[int]:
+        map = {}
+
+        for i, num in enumerate(nums):
+            complement = target - num
+            if complement in map:
+                return [map[complement], i]
+            map[num] = i
+
+
+sol = Solution()
+print(sol.twoSum([2,7,11,15], 9))  # Output: [0, 1]
+print(sol.twoSum([3,2,4], 6))      # Output: [1, 2]
+print(sol.twoSum([3,3], 6))        # Output: [0, 1]

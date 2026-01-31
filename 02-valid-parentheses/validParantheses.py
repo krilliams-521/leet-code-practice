@@ -9,3 +9,12 @@ class Solution:
                     return False
                 del stack[-1]
         return stack == []
+
+
+if __name__ == "__main__":
+    sol = Solution()
+    print(sol.isValid("()"))          # True
+    print(sol.isValid("()[]{}"))      # True
+    print(sol.isValid("(]"))          # False
+    print(sol.isValid("([)]"))        # False
+    print(sol.isValid("{[]}"))        # True

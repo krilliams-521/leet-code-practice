@@ -14,5 +14,8 @@ var climbStairs = function(n) {
   return second;
 };
 
-// Example usage:
-console.log(climbStairs(8)); // 34
+console.log(climbStairs(1)); // Output: 1
+console.log(climbStairs(2)); // Output: 2
+console.log(climbStairs(3)); // Output: 3
+console.log(climbStairs(4)); // Output: 5
+console.log(climbStairs(5)); // Output: 8

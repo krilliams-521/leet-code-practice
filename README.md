@@ -1,23 +1,24 @@
-| #      | Problem                             | Core Pattern                               | Key Data Structures                              | Time Complexity    | Description                                                                                          |
-| ------ | ----------------------------------- | ------------------------------------------ | ------------------------------------------------ | ------------------ | ---------------------------------------------------------------------------------------------------- |
-| **1**  | **Two Sum**                         | 🧩 **Hash Map / Hashing**                  | Hash map (`{ number → index }`)                  | **O(n)**           | Use a map for constant-time lookups of complements. Classic hashing pattern for fast element lookup. |
-| **2**  | **Valid Parentheses**               | 🧱 **Stack**                               | Stack (array used as LIFO)                       | **O(n)**           | Push open brackets, pop when matching close brackets. Valid if stack empties.                        |
-| **3**  | **Merge Two Sorted Linked Lists**   | 🔗 **Linked List / Two Pointers**          | Linked list nodes                                | **O(n + m)**       | Traverse both lists with pointers and build a merged list. Classic two-pointer merge pattern.        |
-| **4**  | **Best Time to Buy and Sell Stock** | 📉 **Sliding Window / One-Pass Greedy**    | Variables (`minPrice`, `maxProfit`)              | **O(n)**           | Track the lowest price so far and the best profit seen. One-pass optimization.                       |
-| **5**  | **Valid Palindrome**                | 🔄 **Two Pointers**                        | Pointers (indices)                               | **O(n)**           | Check characters from both ends inward while skipping non-alphanumerics.                             |
-| **6**  | **Invert Binary Tree**              | 🌲 **Recursion / Tree Traversal (DFS)**    | Binary tree nodes                                | **O(n)**           | Swap left/right children at each node recursively. Each node visited once.                           |
-| **7**  | **Valid Anagram**                   | 🔠 **Hash Map / Frequency Counting**       | Object / Hash map (`{ char → count }`)           | **O(n)**           | Count char frequencies in `s`, decrement with `t`. Return false if mismatch.                         |
-| **8**  | **Binary Search**                   | 🎯 **Divide and Conquer / Two Pointers**   | Sorted array with `left`, `right`, `mid` indices | **O(log n)**       | Halve the search space repeatedly based on comparison with mid element.                              |
-| **9**  | **Flood Fill**                      | 🌊 **Depth-First Search (DFS)**            | 2D grid (matrix)                                 | **O(m × n)**       | DFS to recolor connected cells of the same original color. Classic flood-fill pattern.               |
-| **10** | **Lowest Common Ancestor (BST)**    | 🧭 **Binary Search Tree Traversal**        | Binary search tree nodes                         | **O(h)**           | Move left or right based on BST property. The split point is the LCA.                                |
-| **11** | **Balanced Binary Tree**            | ⚖️ **Recursion / Post-Order DFS**          | Binary tree nodes                                | **O(n)**           | Compute subtree heights bottom-up. Return -1 on imbalance to exit early.                             |
-| **12** | **Linked List Cycle**               | 🐢🐇 **Two Pointers (Floyd’s Cycle Find)** | Linked list nodes                                | **O(n)**           | Use slow/fast pointers. If they meet, there's a cycle. Fast catches slow only if a loop exists.      |
-| **13** | **Implement Queue Using Stacks**    | 🥞 **Two Stacks**                          | Two stacks (`in`, `out`)                         | **Amortized O(1)** | Push to `in`. Pop/peek from `out`. Transfer from `in` → `out` only when needed. Queue via two LIFOs. |
-| **14** | **First Bad Version**               | 🧪 **Binary Search / Predicate Check**     | Versions 1 → n, isBadVersion()                   | **O(log n)**       | Binary search on predicate. Narrow search space until left = right → first bad version.              |
-| **15** | **Ransom Note**                     | 🧩 **Hash Map / Frequency Counting**       | Object / Hash map (`{ char → count }`)           | **O(m + n)**       | Count magazine chars, decrement for ransomNote. Return false if any char runs out.                  |
-| **16** | **Climbing Stairs**                 | 🔢 **Dynamic Programming (Fibonacci)**     | Variables (`first`, `second`)                    | **O(n)**           | DP: ways(n) = ways(n-1) + ways(n-2). Space-optimized Fibonacci approach.                            |
-| **17** | **Longest Palindrome**              | 🔠 **Hash Map / Frequency Counting**       | Object / Hash map (`{ char → count }`)           | **O(n)**           | Count char frequencies, use pairs for palindrome, add one odd as center if exists.                  |
-| **18** | **Reverse Linked List**               | 🔄 **Linked List / Iteration**              | Linked list nodes                                | **O(n)**           | Iteratively reverse the `next` pointers of each node. Return the new head. Classic in-place reversal. |
-| **19** | **Majority Element**                  | 🗳️ **Boyer-Moore Voting Algorithm**         | Variables (`candidate`, `count`)                 | **O(n)**           | Track a candidate and a count. Increment for matches, decrement for mismatches. Candidate at end is majority. Space-efficient, single pass. |
-| **20** | **Add Binary**                        | ➕ **Bit Manipulation / Two Pointers**       | Strings, pointers, carry                         | **O(n)**           | Add binary strings from right to left, keeping track of carry. Build result string in reverse. Classic simulation of binary addition. |
-| **21** | **Diameter of Binary Tree**           | 🌲 **Recursion / Depth-First Search (DFS)** | Binary tree nodes                                | **O(n)**           | At each node, compute the longest path through left and right children. Track max diameter globally. |
+| #  | Problem                         | Pattern / Algorithm            | Notes                                               |
+| -- | ------------------------------- | ------------------------------ | --------------------------------------------------- |
+| 1  | Two Sum                         | Hash Map                       | Store seen numbers and look up complements in O(1). |
+| 2  | Valid Parentheses               | Stack                          | Push opens, pop matching closes.                    |
+| 3  | Merge Two Sorted Lists          | Linked List, Two Pointers      | Traverse both lists and build merged result.        |
+| 4  | Best Time to Buy and Sell Stock | Sliding Window, Greedy         | Track minimum price and max profit.                 |
+| 5  | Valid Palindrome                | Two Pointers                   | Compare from both ends inward.                      |
+| 6  | Invert Binary Tree              | DFS, Recursion                 | Swap left and right children recursively.           |
+| 7  | Valid Anagram                   | Hash Map, Frequency Count      | Count characters and compare frequencies.           |
+| 8  | Binary Search                   | Binary Search                  | Repeatedly halve the search space.                  |
+| 9  | Flood Fill                      | DFS                            | Visit connected cells and recolor.                  |
+| 10 | Lowest Common Ancestor (BST)    | BST Traversal                  | Use BST ordering to find split point.               |
+| 11 | Balanced Binary Tree            | Post-Order DFS                 | Compute subtree heights and detect imbalance.       |
+| 12 | Linked List Cycle               | Fast & Slow Pointers           | Floyd's cycle detection algorithm.                  |
+| 13 | Implement Queue Using Stacks    | Two Stacks                     | Use one stack for input and one for output.         |
+| 14 | First Bad Version               | Binary Search                  | Search for first true value in a predicate.         |
+| 15 | Ransom Note                     | Hash Map, Frequency Count      | Count available characters and consume them.        |
+| 16 | Climbing Stairs                 | Dynamic Programming            | Fibonacci-style recurrence.                         |
+| 17 | Longest Palindrome              | Hash Map, Frequency Count      | Use character pairs and optional center.            |
+| 18 | Reverse Linked List             | Linked List Iteration          | Reverse `next` pointers in-place.                   |
+| 19 | Majority Element                | Boyer-Moore Voting             | Track candidate and count.                          |
+| 20 | Add Binary                      | Bit Manipulation, Two Pointers | Simulate binary addition with carry.                |
+| 21 | Diameter of Binary Tree         | DFS, Recursion                 | Longest path through any node.                      |
+| 22 | Middle of the Linked List       | Fast & Slow Pointers           | Move slow by 1 and fast by 2; slow ends at middle.  |

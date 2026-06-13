@@ -3,12 +3,12 @@
 | 1  | Two Sum                         | Hash Map                       | Store seen numbers and look up complements in O(1).          |
 | 2  | Valid Parentheses               | Stack                          | Push opens and pop matching closes.                          |
 | 3  | Merge Two Sorted Lists          | Linked List, Two Pointers      | Traverse both lists and build a merged result.               |
-| 4  | Best Time to Buy and Sell Stock | Sliding Window, Greedy         | Track minimum price and maximum profit.                      |
+| 4  | Best Time to Buy and Sell Stock | Greedy (One Pass)              | Track minimum price so far and maximum profit.               |
 | 5  | Valid Palindrome                | Two Pointers                   | Compare characters from both ends inward.                    |
 | 6  | Invert Binary Tree              | DFS, Recursion                 | Swap left and right children recursively.                    |
 | 7  | Valid Anagram                   | Hash Map, Frequency Count      | Count characters and compare frequencies.                    |
 | 8  | Binary Search                   | Binary Search                  | Repeatedly halve the search space.                           |
-| 9  | Flood Fill                      | DFS, Graph Traversal           | Visit connected cells and recolor them.                      |
+| 9  | Flood Fill                      | DFS on Matrix                  | Visit connected cells and recolor them.                      |
 | 10 | Lowest Common Ancestor (BST)    | BST Traversal                  | Use BST ordering to find the split point.                    |
 | 11 | Balanced Binary Tree            | Post-Order DFS                 | Compute subtree heights and detect imbalance.                |
 | 12 | Linked List Cycle               | Fast & Slow Pointers           | Use Floyd's cycle detection algorithm.                       |

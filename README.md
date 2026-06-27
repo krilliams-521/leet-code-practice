@@ -27,3 +27,4 @@
 | 25  | Maximum Subarray                | Kadane’s Algorithm             | Track max subarray ending at each index; extend or restart.           |
 | 26  | Insert Interval                 | Intervals, Merge Overlaps      | Handle before/overlap/after cases; merge using min(start), max(end).  |
 | 27  | Update Matrix                   | Multi-source BFS (Grid)        | Start BFS from all 0s and expand outward to compute nearest distance. |
+| 28  | K Closest Points to Origin      | Sort + Custom Comparator       | Compute distance² (x² + y²), sort points, return first k elements.    |

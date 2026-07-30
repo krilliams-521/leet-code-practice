@@ -29,3 +29,4 @@
 | 27 | Update Matrix                                  | Multi-source BFS (Grid)        | Start BFS from all 0s and expand outward to compute nearest distance.                                                                |
 | 28 | K Closest Points to Origin                     | Sort + Custom Comparator       | Compute distance² (`x² + y²`), sort points, return first `k` elements.                                                               |
 | 29 | Longest Substring Without Repeating Characters | Sliding Window + Hash Set      | Expand the window with the right pointer, shrink from the left until all characters are unique, and track the maximum window length. |
+| 30 | 3Sum                                           | Sorting + Two Pointers         | Sort the array, fix one value, then use left/right pointers to find pairs that complete the sum. Skip duplicates to return unique triplets. |

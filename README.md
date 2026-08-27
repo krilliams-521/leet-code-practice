@@ -32,3 +32,4 @@
 | 30 | 3Sum                                           | Sorting + Two Pointers         | Sort the array, fix one value, then use left/right pointers to find pairs that complete the sum. Skip duplicates to return unique triplets. |
 | 31 | Binary Tree Level Order Traversal              | BFS, Queue                     | Process the tree level by level using a queue; record each level as a separate array.                                               |
 | 32 | Clone Graph                                    | DFS, Hash Map                  | Clone each node once and map original nodes to their copies; use the map to handle cycles.                                          |
+| 33 | Course Schedule                                | DFS, Graph Cycle Detection     | Build an adjacency list and use DFS states to detect cycles in the prerequisite graph.                                              |

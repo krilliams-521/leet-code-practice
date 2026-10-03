@@ -37,3 +37,4 @@
 | 35  | Implement Trie (Prefix Tree)                   | Trie / Prefix Tree             | Build character paths; `insert` creates missing nodes, `search` requires `isEnd`, and `startsWith` only requires the path to exist.         |
 | 36  | Coin Change                                    | Dynamic Programming            | Break each amount into `coin + remainder`; reuse previously solved amounts and take the minimum number of coins.                            |
 | 37  | Product of Array Except Self                   | Prefix & Suffix Products       | Split each answer into the product of everything to the left and right; calculate both with two passes in O(n) time.                        |
+| 38  | Min Stack                                      | Stack, Auxiliary Stack         | Use a second stack that mirrors the main stack and stores the minimum value at each position, allowing `getMin()` in O(1).                  |

@@ -43,3 +43,4 @@
 | 41 | Rotting Oranges                                 | Multi-source BFS (Grid)        | Start with all rotten oranges in the queue; process the queue level by level, spreading rot each minute and tracking fresh oranges.          |
 | 42 | Search in Rotated Sorted Array                  | Modified Binary Search         | Identify the sorted half, check whether the target falls within its bounds, and discard the other half each iteration.                      |
 | 43 | Combination Sum                                  | Backtracking, DFS               | Build combinations recursively, reuse candidates from the current index, and backtrack with `pop()` to explore alternatives.               |
+| 44 | Permutations                                     | Backtracking, DFS               | Build permutations by choosing unused numbers; track selections with a `used` array and undo choices when backtracking.                    |

@@ -45,3 +45,4 @@
 | 43  | Combination Sum                                | Backtracking, DFS              | Build combinations recursively, reuse candidates from the current index, and backtrack with `pop()` to explore alternatives.                  |
 | 44  | Permutations                                   | Backtracking, DFS              | Build permutations by choosing unused numbers; track selections with a `used` array and undo choices when backtracking.                       |
 | 45  | Merge Intervals                                | Sorting, Greedy                | Sort intervals by starting value; merge overlapping intervals by extending the ending value, and add non-overlapping intervals to the result. |
+| 46  | Lowest Common Ancestor of a Binary Tree       | DFS, Post-Order Traversal     | Recursively search both subtrees; if both return a target, the current node is the LCA. Otherwise, return the non-null result up the recursive call stack. |
